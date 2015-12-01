@@ -7,8 +7,10 @@ import expect from 'expect';
 describe('Button', () => {
   it('is a button', () => {
     const button = TestUtils.renderIntoDocument(<Button />);
+    const node = ReactDOM.findDOMNode(button);
 
-    expect(ReactDOM.findDOMNode(button)).toExist();
+    expect(node).toExist();
+    expect(node.tagName).toBe('DIV');
   });
 
   it('has a class name', () => {
