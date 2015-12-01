@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test-mocha-with-dom-assertions": "mocha --opts mocha-with-dom-assertions/mocha.opts  mocha-with-dom-assertions/"
+    "test-mocha-with-dom-assertions": "mocha --opts mocha-with-dom-assertions/mocha.opts  mocha-with-dom-assertions/",
+    "test-mocha-with-shallow-renderer": "mocha --opts mocha-with-shallow-renderer/mocha.opts  mocha-with-shallow-renderer/"
   },
   "author": "",
   "license": "MIT",
