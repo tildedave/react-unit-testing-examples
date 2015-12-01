@@ -20,6 +20,20 @@ describe('Button', () => {
     expect(node.className).toBe('button');
   });
 
+  it('has an internal contents container', () => {
+    const button = TestUtils.renderIntoDocument(
+      <Button>Contents Here!</Button>
+    );
+
+    // Grab contents, assert on inner text
+    const contents = ReactDOM.findDOMNode(button).querySelector(
+      '.button-contents'
+    );
+
+    expect(contents.textContent).toBe('Contents Here!');
+    expect(contents.innerHTML).toBe('Contents Here!');
+  });
+
   it('has click behavior', () => {
     let clicked = false;
     const onClick = () => { clicked = true; };
